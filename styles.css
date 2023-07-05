@@ -1,0 +1,329 @@
+/*overall*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+/*navigation bar*/
+nav {
+    background-image: linear-gradient(to bottom right, rgb(9, 255, 0), rgb(0, 174, 255));;
+    height: 80px;
+    width: 100%;
+    font-family: monospace;
+}
+label.logo a {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0px 20px;
+    font-weight: bold;
+}
+nav label.logo a {
+    background: none;
+    text-decoration: none;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 7px 11px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+nav ul li a.active,a:hover {
+    background: linear-gradient(to bottom right, rgb(0, 81, 255), rgb(7, 182, 1));
+    opacity: 80%;
+    transition: 0.5s;
+}
+/*menu button*/
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+/*main background*/
+body {
+    background: url(main-background.png) no-repeat;
+    background-size: cover;
+}
+/*image logo size formatting*/
+.title-image {
+    width: 100%;
+    max-width: 40em;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*home page paragraphing*/
+.body h1, p {
+    text-align: left justify;
+    margin-left: 5%;
+    width: 90%;
+}
+.body h1 {
+    padding-top: 15px;
+}
+/*table format*/
+table, th, td {
+    border: 1px solid gray;
+    overflow-wrap: normal;
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+table {
+    margin: 5%;
+    width: 90%;
+}
+td:first-of-type {
+    width: 28%;
+    margin: 3%;
+}
+td:nth-of-type(2) {
+    width: 18.5%;
+    margin: 3%;
+}
+td:nth-of-type(3) {
+    width: 16%;
+    margin: 3%;
+}
+td:nth-of-type(4) {
+    width: 50%;
+}
+td ol li {
+    list-style: upper-roman;
+}
+/*contact*/
+.ndp-rubbish-pick-up a, a:hover {
+    text-decoration: none;
+    background: none;
+}
+/*return to top button*/
+.return {
+    width: 90%;
+    margin: 5%;
+    background: rgb(0, 62, 194);
+    border-radius: 10px;
+}
+.return a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    height: 20px;
+}
+/*menu size formatting*/
+@media(max-width: 952px) {
+    label.logo a {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+@media(max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        background: #2c3e50;
+        text-align: center;
+        transition: all .5s;
+        z-index: 100;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    nav ul li a.active, a:hover {
+        background: none;
+        color: rgb(9, 255, 0);
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/*login box*/
+.login-box {
+    position: static;
+    margin: auto;
+    width: 80%;
+    padding: 40px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    background: #141e30;
+}
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.login-box .user-box {
+    position: relative;
+}
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: #141e30;
+}
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+.submit {
+    color: #03e9f4;
+}
+.login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+button .login-form-submit {
+    color: #141e30;
+
+}
+/*submit button animation*/
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+/*footer*/
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #141e30;
+    color: white;
+    text-align: center;
+}
