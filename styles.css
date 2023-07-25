@@ -118,6 +118,15 @@ td ol li {
     text-decoration: none;
     background: none;
 }
+/*goals page*/
+#goals {
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+.section-container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+}
 /*return to top button*/
 .return {
     width: 90%;
