@@ -15,9 +15,9 @@ nav {
 }
 label.logo a {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 80px;
-    padding: 0px 20px;
+    padding: 0px 20px 0px 50px;
     font-weight: bold;
 }
 nav label.logo a {
@@ -27,6 +27,7 @@ nav label.logo a {
 nav ul {
     float: right;
     margin-right: 20px;
+    margin-bottom: 0%;
 }
 nav ul li {
     display: inline-block;
@@ -35,7 +36,7 @@ nav ul li {
 }
 nav ul li a {
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     padding: 7px 11px;
@@ -121,11 +122,69 @@ td ol li {
 /*goals page*/
 #goals {
     overflow-x: hidden;
-    font-family: sans-serif;
 }
 .section-container {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+.section-container .columns {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.section-container .columns.image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-container .columns.content .content-container {
+    padding: 40px 50px;
+}
+.section-container .columns.content .content-container p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.unhidden {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hidden {
+    display: none;
+}
+@media screen and (max-width: 756px) {
+    .section-container {
+        flex-flow: row wrap;
+    }
+    .section-container .columns.image {
+        display: block;
+        width: 100%;
+        height: 300px;
+        background-size: contain;
+    }
+    .section-container .columns.content {
+        display: block;
+        width: 100%;
+    }
+    .unhidden {
+        display: none;
+    }
+    .hidden {
+        display: block;
+    }
+    .section-container .columns.content .content-container {
+        padding: 20px 35px;
+    }
+    .section-container .columns.content .content-container h1 {
+        margin-bottom: 5px;
+    }
 }
 /*return to top button*/
 .return {
@@ -164,6 +223,7 @@ td ol li {
         text-align: center;
         transition: all .5s;
         z-index: 100;
+        margin-bottom: 0%;
     }
     nav ul li {
         display: block;
