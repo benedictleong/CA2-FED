@@ -411,6 +411,21 @@ button .login-form-submit {
     color: #141e30;
 
 }
+#submit {
+    display: none;
+}
+.alert {
+    width: 80% !important;
+    animation: hideAnimation 0s ease-in 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
 /*submit button animation*/
 .login-box a span:nth-child(1) {
     top: 0;
